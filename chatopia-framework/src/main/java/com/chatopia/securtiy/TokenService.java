@@ -39,7 +39,7 @@ public class TokenService {
         }
     }
 
-    public String createToken(String email) {
-        return email;
+    public String createToken(User user) {
+        return "";
     }
 }

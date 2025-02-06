@@ -1,6 +1,7 @@
 package com.chatopia.aop;
 import com.chatopia.annotation.Auth;
 import com.chatopia.entity.User;
+import com.chatopia.securtiy.AuthContent;
 import com.chatopia.securtiy.TokenService;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
@@ -29,6 +30,7 @@ public class HandlerAop {
             // TODO 未登录异常
             throw new RuntimeException("未登录");
         }
+        // 存入上下文
+        AuthContent.setLoginUser(user);
     }
-
 }

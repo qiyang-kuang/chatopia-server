@@ -256,4 +256,24 @@ public class RedisCache
     {
         return redisTemplate.keys(pattern);
     }
+
+    /**
+     * 添加Set
+     * @param key
+     * @param obj
+     * @return
+     */
+    public boolean addCacheSetValue(final String key, final Object obj){
+        return redisTemplate.opsForSet().add(key, obj) > 0;
+    }
+
+    /**
+     * 删除Set
+     * @param key
+     * @param obj
+     * @return
+     */
+    public boolean removeCacheSetValue(final String key, final Object obj){
+        return redisTemplate.opsForSet().remove(key, obj) > 0;
+    }
 }

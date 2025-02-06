@@ -1,0 +1,6 @@
+spring:
+  redis:
+    username:
+    password: Kqy030112
+    host: 198.19.249.31
+    port: 6379

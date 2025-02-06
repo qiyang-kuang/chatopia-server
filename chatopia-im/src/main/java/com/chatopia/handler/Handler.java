@@ -8,7 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
  * @date: 2025/1/31
  * @description: handler接口
  */
-public interface Handler<MESSAGE> {
+public interface Handler<MESSAGE>{
     /**
      * 处理消息
      *
